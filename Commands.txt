@@ -1,0 +1,18 @@
+comandos linux
+
+borrar archivos
+
+rm -rf [nombre archivo o carpeta]
+
+pwd ver ruta
+
+comandos necesarios react terminal linux
+
+iniciar un proyecto  react:
+usando create react app
+npx create-react-app [nombre de la carpeta]
+
+
+una vez creado usar npx start para ejecutar la carpeta
+
+control+c cerrar server

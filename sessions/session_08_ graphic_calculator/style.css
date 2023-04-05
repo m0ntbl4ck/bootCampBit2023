@@ -1,0 +1,46 @@
+.website-background-black{
+	background: white;
+	height: 40px;
+}
+
+.text-color-white
+{
+	color: white;
+	font-size: xx-large;
+
+}
+
+.container
+{
+display: flex;
+justify-content: center;
+margin: 29px;
+
+}
+
+
+	.item{
+background: rgb(161, 158, 158);
+width: 100px;
+height: 100px;
+font-size: xx-large;
+text-align: center;
+vertical-align: center;
+align-items: middle;
+border: 1px solid black;
+line-height: 100px;
+
+	}
+.item2
+{
+	background: orange;
+width: 100px;
+height: 100px;
+font-size: xx-large;
+text-align: center;
+vertical-align: center;
+align-items: middle;
+border: 1px solid black;
+line-height: 100px;
+
+}

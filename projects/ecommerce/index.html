@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi tienda Online</title>
+  <!-- Jquery -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> -->
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <a href="index.html" class="brand">E-coomerce</a>
+      <ul>
+        <!-- <li><a href="index.html">Home</a> -->
+        <li><a id="btn_product" href="#">Productos</a></li>
+        <li><a id="btn_shoppingCart" href="#">Carrito</a></li>
+        <li><a id="btn_aboutUs" href="#">Acerca de Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="sectionFilter">
+    <select name="" id="filter">
+      <option value="item">Ver Todo</option>
+
+      <option value="videogames">Videojuegos</option>
+      <option value="smartwatch">Smartwatch</option>
+      <option value="earphones">Audifonos</option>
+      <option value="phone">Celulares</option>
+    </select>
+  </div>
+  <div id="mensj-alert">
+    <div>
+      <h2> El producto se agregó correctamente a tu carrito</h2>
+    </div>
+  </div>
+  <section id="product">
+    <div class="container-items">
+      <div class="item smartwatch">
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1544117519-31a4b719223d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1352&q=80"
+            alt="producto" />
+        </figure>
+
+        <div class="info-product">
+          <h2>Apple watch</h2>
+          <p class="price">$200</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item earphones">
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+            alt="producto" />
+        </figure>
+
+        <div class="info-product">
+          <h2>Head Phones Sony</h2>
+          <p class="price">$80</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item phone">
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1607936854279-55e8a4c64888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+            alt="producto" />
+        </figure>
+
+        <div class="info-product">
+          <h2>Iphone 12</h2>
+          <p class="price">$ 750</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item videogames">
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            alt="producto" />
+        </figure>
+
+        <div class="info-product">
+          <h2>Play Station 5</h2>
+          <p class="price">$ 450</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item videogames">
+
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+            alt="producto" />
+        </figure>
+
+        <div class="info-product">
+          <h2>Xbox Series X</h2>
+          <p class="price">$ 200</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item earphones">
+
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1605464315542-bda3e2f4e605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            alt="producto" />
+        </figure>
+
+        <div class="info-product">
+          <h2>Earphones</h2>
+          <p class="price">$ 40</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <section id="shoppingCart">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cant</th>
+          <th>producto</th>
+          <th>Precio</th>
+        </tr>
+
+      </thead>
+      <tbody id="table1">
+        <tr>
+          <td>El carrito esta vacio</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    <button id="btn-pay">Pagar</button>
+
+    <!-- <div class="mensj-alert">
+      <div>
+        <h2> El pago se realizo correctamente</h2>
+      </div> -->
+    </div>
+    </div>
+  </section>
+
+
+  <section id="aboutUs">
+    <h1>
+      Acerca de Nosotros
+    </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quo labore aliquid illo esse voluptate debitis cum
+      velit ipsa? Perferendis praesentium voluptas eius mollitia sit alias reprehenderit amet explicabo odit!
+      At laudantium repellat maxime voluptates dicta, magnam excepturi maiores officia sunt velit provident dolore!
+      Neque reiciendis nihil molestias at. Blanditiis saepe, odio laudantium culpa minus voluptates minima aliquam odit
+      ducimus.
+      Numquam, magnam est delectus sequi possimus atque rem beatae repellendus repudiandae quas explicabo eum quisquam
+      totam quis fugit deserunt dicta nulla deleniti ipsum accusantium neque corporis quod. Ab, modi architecto.
+      Doloremque aperiam fugit eveniet esse quaerat at veritatis quidem suscipit tempore quisquam ipsam id, nobis
+      aspernatur culpa distinctio! Ipsa tempore rem impedit porro est dolore expedita deserunt omnis repellat et.
+      Vero unde exercitationem id asperiores eum corrupti sequi ratione repellendus culpa distinctio et incidunt
+      repellat maxime ipsum voluptates assumenda tenetur natus, dolorem reprehenderit. Facere soluta accusantium
+      repellat impedit et numquam.
+      Optio cumque odio rerum placeat architecto vel consequatur vero voluptas provident ex, doloribus aliquid est ut
+      repellat dolor assumenda praesentium ratione velit dolores impedit voluptatem reiciendis corporis distinctio
+      laudantium. Quas.
+      Omnis consectetur ratione doloribus nostrum possimus ab et libero. Ad voluptatum laudantium rem officiis ex dolore
+      molestias beatae animi. Perferendis quo maxime quasi. Ipsum inventore error qui fugiat repudiandae voluptate.
+      Similique aperiam quasi quo pariatur consectetur cum natus facilis deserunt ea consequuntur soluta, vitae velit
+      totam molestias! Error, quaerat totam. Non expedita officiis numquam doloribus? Cum perspiciatis illo harum modi.
+      Nisi eius ex voluptatum quo ipsa fugit magni enim, delectus aliquid alias sapiente aliquam consectetur laborum
+      quia amet. Aliquid, cum eum magnam nesciunt praesentium enim dolorem nisi quaerat aperiam voluptatem?
+      Eos reiciendis placeat quos, iusto dolorem fugit quidem maiores fugiat. Ipsa dolorum placeat ipsam nisi molestiae
+      laborum molestias assumenda consectetur? Aperiam facere odio obcaecati alias enim expedita quibusdam blanditiis
+      amet.</p>
+  </section>
+
+  <footer>
+    <div class="container-footer">
+      <h1>
+        Acerca de Nosotros
+      </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quo labore aliquid illo esse voluptate debitis
+        cum
+        velit ipsa? Perferendis praesentium voluptas eius mollitia sit alias reprehenderit amet explicabo odit!
+        At laudantium repellat maxime voluptates dicta, magnam excepturi maiores officia sunt velit provident dolore!
+        Neque reiciendis nihil molestias at. Blanditiis saepe, odio laudantium culpa minus voluptates minima aliquam
+        odit
+        ducimus.
+        Numquam, magnam est delectus sequi possimus atque rem beatae repellendus repudiandae quas explicabo eum quisquam
+        totam quis fugit deserunt dicta nulla deleniti ipsum accusantium neque corporis quod. Ab, modi architecto.
+        Doloremque aperiam fugit eveniet esse quaerat at veritatis quidem suscipit tempore quisquam ipsam id, nobis
+        aspernatur culpa distinctio! Ipsa tempore rem impedit porro est dolore expedita deserunt omnis repellat et.
+        Vero unde exercitationem id asperiores eum corrupti sequi ratione repellendus culpa distinctio et incidunt
+        repellat maxime ipsum voluptates assumenda tenetur natus, dolorem reprehenderit. Facere soluta accusantium
+        repellat impedit et numquam.
+        Optio cumque odio rerum placeat architecto vel consequatur vero voluptas provident ex, doloribus aliquid est ut
+        repellat dolor assumenda praesentium ratione velit dolores impedit voluptatem reiciendis corporis distinctio
+        laudantium. Quas.
+        Omnis consectetur ratione doloribus nostrum possimus ab et libero. Ad voluptatum laudantium rem officiis ex
+        dolore
+        molestias beatae animi. Perferendis quo maxime quasi. Ipsum inventore error qui fugiat repudiandae voluptate.
+        Similique aperiam quasi quo pariatur consectetur cum natus facilis deserunt ea consequuntur soluta, vitae velit
+        totam molestias! Error, quaerat totam. Non expedita officiis numquam doloribus? Cum perspiciatis illo harum
+        modi.
+        Nisi eius ex voluptatum quo ipsa fugit magni enim, delectus aliquid alias sapiente aliquam consectetur laborum
+        quia amet. Aliquid, cum eum magnam nesciunt praesentium enim dolorem nisi quaerat aperiam voluptatem?
+        Eos reiciendis placeat quos, iusto dolorem fugit quidem maiores fugiat. Ipsa dolorum placeat ipsam nisi
+        molestiae
+        laborum molestias assumenda consectetur? Aperiam facere odio obcaecati alias enim expedita quibusdam blanditiis
+        amet.</p>
+
+    </div>
+  </footer>
+</body>
+
+</html>

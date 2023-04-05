@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1>Rellena tu CV</h1>
+    </header>
+    
+    <section>
+    <form action="">
+      <label for="">Nombre:</label><br />
+      <input
+        type="text"
+        name="name"
+        maxlength="30"
+        required=""
+        pattern="[a-zA-Z]+"
+      /><br /><br />
+
+      <label for="">Apellido:</label><br />
+      <input
+        type="text"
+        name="lastname"
+        maxlength="80"
+        required=""
+        pattern="[a-zA-Z]+"
+      /><br /><br />
+
+      <label for="">Contraseña:</label><br />
+      <input
+        type="password"
+        name="password"
+        maxlength="10"
+        minlength="8"
+        required=""
+      /><br /><br />
+
+      <label for="">Documento identidad:</label><br />
+      <input
+        type="text"
+        name="dni"
+        maxlength="10"
+        minlength="8"
+        required=""
+        pattern="[0-9]+"
+      /><br /><br />
+
+      <label for="">Sexo:</label><br />
+      <input type="radio" name="pregunta" id="" required="" /><label for=""
+        >Masculino</label
+      ><br />
+      <input type="radio" name="pregunta" id="" /><label for="">Femenino</label
+      ><br /><br /><br />
+
+      <label for="">Incluir Foto:</label
+      ><input type="file" name="photo" required="" /><br /><br />
+
+      <input type="checkbox" name="" id="" checked="" /><label for="">
+        Suscribirme al boletin de novedades</label
+      ><br /><br />
+
+      <input type="reset" value="Borrar cambios" />
+      <input type="submit" value="guardar cambios" />
+    </form>
+  </section>
+  </body>
+</html>

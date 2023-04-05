@@ -1,0 +1,169 @@
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    /* max-width: 1200px; */
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    padding: 0 100px 40px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    z-index: 1;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: #333;
+    padding: 0 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+ section {
+    padding: 150px 100px 0 100px;
+    box-sizing: border-box;
+    margin-bottom: 500px;
+  
+} 
+
+#sectionFilter{
+  padding: 150px 100px 0 100px;
+}
+#mensj-alert{
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  background-color: grey;
+  color: #fff;
+  /* opacity: .5; */
+  
+  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.mensj-oculto
+{
+transition: 5s;
+opacity: 0;
+}
+
+a:hover {
+    color: orange;
+    transform: translate(-50% -50%) scale(3);
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+img{
+    max-width: 100%;
+}
+
+  button {
+    color: #fff;
+    background-color: #010326;
+    border-radius: 5%;
+  }
+
+
+
+  #product{
+    margin-bottom: 60px;
+  }
+
+  .container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+  }
+
+  .item{
+    border-radius:10px
+  }
+
+ .item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+ }
+
+
+ .item img{
+    width: 100%;
+    height: 450px;
+    /* object-fit: cover;  */
+    border-radius: 10px 10px 0 0;
+    transition: all .3s;
+ }
+
+ .item figure{
+    overflow: hidden;
+ }
+ .item:hover img{
+    transform: scale(1.2);
+ }
+ .info-product
+ {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .price{
+    font-size: 18px;
+    font-weight: 900;
+ }
+
+ .info-product button{
+    border: none;
+    background: none;
+    background-color: black;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+ }
+
+ footer{
+  background-color: black;
+  height: 300px;
+  color:#fff;
+ }

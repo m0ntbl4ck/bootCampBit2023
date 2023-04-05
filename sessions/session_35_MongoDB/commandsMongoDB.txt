@@ -1,0 +1,165 @@
+FORMA PARA RELAIZAR CONSULTAS
+
+{"clave": "valor"}
+
+{"marca": "apple"}---> consultamos todos los productos con esa clave
+
+<-------------------------------OPERADORES MATEMÁTICOS P/MongoDB-------------------------------------->
+
+-$eq  ---> igual que (equal)
+-$ne  ---> distinto que (not equal)
+-$gt  ---> valores mayores (greater than)
+-$gte ---> valores mayores o iguales que (greater than or equal)
+-$lt ----> valores menores que (lower than)
+-$lte ---> valores menores o iguales que (lower than or equal)
+
+
+{"marca": { $eq: "apple"}}
+
+{"marca": {$ne: "apple"}}
+
+{"precio": {$lte: 450000}}
+
+
+<----------------------------------------------CONSULTAS--------------------------------------------------------->
+
+1. Obtener documentos que el nombre sea "Andrea".
+2. Obtener documentos que nombre No sea "Peter".
+3. Ontener las personas mayores de edad.
+
+<----------------------------------------OPERADORES LOGICOS (AND, OR,)------------------------------------------------------>
+
+AND se usa (,)
+
+{<campo>: <valor>,<campo2>: <valor2>,<campo2>: <valor2> }
+
+1. Obtener aquellas personas que sean mayor de edad y tengan talle "M"
+{"edad":{$gte: 18 }, "talle": "M" }
+
+2. Obtener las personas de genero Femenino y que sean menores de edad.
+
+{"genero":{$eq:"F"}, "edad": {$lt: 18}, "talle":{$ne: "L"}}
+
+3. Agregar a la anterior el talle que NO sea L
+
+
+
+OR
+
+{$or: [{consulta}, {consulta}]}
+
+{$or: [ {genero: "M"}, {edad: {$eq: 18}}]}
+
+
+{$or:[{talle: {eq: "XL"}},{fec_nac:{$regex: /1985$/}}]}
+
+obtener aquellas personas que su apellido comienza con "D" y que son mujeres o mayor a 50 años
+{ consulta1, $or: [ {consulta2}, {consulta3} ] }
+
+{apellido:{$regex: /^D/}, $or:[{genero:"F"}, {edad: {$gt: 50}}]}
+
+
+
+
+<--------------------------------------------EXTRAS-------------------------------------------------->
+
+-Obtener los documentos tipo string que termine en ---> ej: mail termine en "nifty.com 
+{<campo>: {$regex: /example.com$/}}
+ { email: {$regex: /@nifty.com$/}}
+
+ -Obtener aquellas personas cuyo nombre termine en "a" y su talle sea el "S"
+
+ {"nombre": {$regex: /a$/}, "talle": "S"}
+
+
+ -Obtener los documentos tipo string que empiecen --->
+ 
+ Obtener documentos que un campo comience con la letra "a"
+
+{"nombre":{ $regex: /^a/ }}
+
+Obtener documentos que un campo comience con la letra "A"
+{"nombre":{ $regex: /^A/}}
+
+ ("i" ignora si es mayuscula o minuscula)
+{"nombre":{ $regex: /^a/i }}
+
+-Obtener en los documentos tipo string que tengan la letra o valor en cualquier posición---->
+
+{"nombre; {$regex: /a/}}
+
+Obtener aquellas personas que su apellido comience con "P" 
+(Sin importar mayus y minus), nacieron y nacieron en el año 1992, Y
+el idioma es distinto a "Italian"
+
+{"apellido": {$regex: /^p/i}, "fec_nac": {$regex: /1992$/}, "idioma": {$ne: "Italian"}}
+
+
+
+Obtener las personas que en su titulo contengan una "r-" y hallan nacido en el mes de enero .
+
+{"titulo": {$regex: /r/i}, "fec_nac":{$regex: /12/}}
+{titulo:{$regex:/r/}, fec_nac:{$regex: /^.*\/12\/.*$/} }
+
+
+<-------------------------------- Para averiguar Si existe un campo--------------------------------------->
+
+$exists: true (exioste) o false (no existe)
+
+{dominio: {$exists: true}}
+
+
+
+consultamos
+<-------------------------------------- RANGOS, PROJECT SORT-------------------------------------->
+
+RANGO DE VALOR
+{edad:{$gte: 20, $lte:30}}
+
+PROJECT 1 para mostrar clave 0 poara ocultar
+{email:1, _id:0}
+
+SORT 1 menor a mayor [a-z] -1 mayor a menor [z-a] 
+{edad: 1}
+
+
+genero de menor a mayor (ASC)edad de mayor a menor (DESC) y solo mostrar esos campos
+
+genero de menor a mayor (ASC)
+edad de mayor a menor (DESC)
+y solo mostrar esos campos
+
+PROJECT {edad:1, genero:1, _id:0}  SORT {edad: -1, genero:1}
+
+
+
+<---------------------------------------CONSULTAS:--------------------------------------------------------->
+  - buscar documentos que el auto sea marca: "Peugeot" 
+  - buscar documentos que el total (precio) sea mayor a 10000 o que el cliente exista, ordenar por precio de menor a mayor
+  - buscar documentos que fecha de alquiler sea del 2022 (usar regex)
+  - buscar todos los documentos de un cliente en particular, mostrar sólo el campo total.
+
+
+{marca: {$eq:"peugeot"} }
+
+{$or:[{precio:{$gt: 10000}},{cliente:{$ne:null}}]}
+{ precio: 1}
+
+{fec_rent: {$regex: /2022$/}}
+
+{"cliente.nombre": "Andres" }
+
+{"cliente.total": "1", _id:0}
+
+
+
+
+
+<-----------------------------Bucar dentro un Array------------------------------------------------------------------------------>
+
+exista cdentro del array
+{clave: {$in:["valor dentro el array"]}}
+
+No existe dentro del array
+
+{clave:{$nin:["valor que existe en el array"]}}

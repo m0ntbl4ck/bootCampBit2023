@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--usar mayor que y la equita siguiente para crear chield div>h1-->
+    <div>
+        <h1></h1>
+    </div>
+    <!--usar + y la equieta para que esten dentro de un mismo contenedor o etiqueta div>h1+h2-->
+    <div>
+        <h1></h1>
+        <h2></h2>
+    </div>
+    <!-- escalar h1 quedara a nivel de ul div>ul>li^h1-->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+        <h1></h1>
+    </div>
+    <!--
+    escalar mas de un nivel el h1 quedara a nivel de ul div>ul>li>a^^h1-->
+
+    <div>
+        <ul>
+            <li><a href=""></a></li>
+        </ul>
+        <h1></h1>
+    </div>
+    <!-- multiplciar etiquetas con * ul>li*5-->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--usar parentesis para agrupar el footer va estar a nivel de header div>(header>ul>li*2>a^)+footer (()())-->
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
+        <footer>
+
+        </footer>
+
+    </div>
+    <!--agregar CLASS div.header-->
+    <div class="header"></div>
+    <!--agregar ID div#special-->
+    <div id="special"></div>
+    <!-- anidar ID y CLASS div#special.header-->
+    <div id="special" class="header"></div>
+    <!-- Definir atributos con [] a[href="www.google.com"]-->
+    <a href="www.google.com"></a>
+    <!--input[placeholder="nombre"]-->
+    <input type="text" placeholder="nombre">
+    <!--varios atributos input[name="" id="" placeholder=""-->
+    <input type="text" name="" id="" placeholder="">
+
+    <ul>
+        <!--usar $ para multiplicar CLASS o ID  li.item$*5-->
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <!--usar $@-*5 para hacer las clases descendentes li.item$@-*5 -->
+        <li class="item5"></li>
+        <li class="item4"></li>
+        <li class="item3"></li>
+        <li class="item2"></li>
+        <li class="item1"></li>
+
+    </ul>
+</body>
+
+</html>

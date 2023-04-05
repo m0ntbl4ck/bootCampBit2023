@@ -1,0 +1,52 @@
+
+
+/* class (clases)
+id (id)
+
+*/
+
+#background
+{
+    background-color: papayawhip;
+    font-family: Verdana;
+    margin: 80px;
+}
+
+p
+{
+    background-color: #ECBD72;
+    color: black;
+    padding: 80px;
+}
+
+.title
+{
+    color:tomato;
+    text-align: center;
+    font-size: xxx large;
+
+}
+.cursiva
+{
+    font-style: italic;
+}
+
+button
+{
+    background-color: #c49f65;
+}
+
+#btn
+{
+    padding: 3px;
+    background-color: violet;
+}
+
+.contenedor
+{
+border: 0.1em dotted black;
+
+border-radius: 100px;
+margin-bottom: 20px;
+margin-top: 30px;
+}

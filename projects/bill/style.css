@@ -1,0 +1,12 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.background{
+    background-color: white;
+}
+.button{
+    height: 40px;
+}

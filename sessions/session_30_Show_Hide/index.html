@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo .hide() y .show()</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// Esconde el elemento con id "texto" cuando se hace click en el botón
+			$("#boton1").click(function(){
+				$("#texto").hide();
+			});
+
+			// Muestra el elemento con id "texto" cuando se hace click en el botón
+			$("#boton2").click(function(){
+				$("#texto").show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="texto">
+		<p>Este es un texto de ejemplo.</p>
+	</div>
+
+	<button id="boton1">Esconder</button>
+	<button id="boton2">Mostrar</button>
+</body>
+</html>

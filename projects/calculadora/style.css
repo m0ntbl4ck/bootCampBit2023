@@ -1,0 +1,31 @@
+.container {
+ display: flex;
+ justify-content:center;
+ margin: 0%;
+ align-items:center;
+ height: 80px;
+ width: 400px;
+}
+
+.mainContainer{
+    margin: 10%;
+    
+    border: solid 5px;
+    border-color: black;
+    width: 400px;
+    height: 400px;
+
+    
+}
+.button{
+    width: 100px;
+    height: 80px;
+}
+
+.result{
+    width: 400px;
+    height: 80px;
+    display: flex;
+    justify-content: end;
+
+}

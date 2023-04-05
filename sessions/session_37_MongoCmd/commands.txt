@@ -1,0 +1,128 @@
+//mostrar dbs
+
+show dbs 
+
+// ir a la base de datos     
+use nombre de la bds
+
+// hacer consultas en cmd db.collection.find({consulta})
+
+db.People.find({edad:{$lt: 18},genero:"F"})
+
+.count() al final me devuelve el valor
+
+db.People.find({nombre:{$regex: /a$/},talle:"S"}).count()
+
+
+// Crear coleccion nueva
+db.createCollection("TestCollection")
+
+// Borrar una colección
+
+db.TestCollection.drop()
+
+<--------------------PROJECT va despúes de la consulta------------------------->
+
+db.collection.find({},{email: 1, id:0})
+
+db.People.find({nombre:{regex:/^A/}},{nombre:1, _id:0})
+
+
+db.People.find({apellido:{$regex:/s/}, idioma:"Italian"},{idioma:1, _id:0})
+
+
+
+<----------------------------SORT Va despues de find-------------------------------------->
+
+db.collection.find({}).sort({})
+
+
+db.People.find({fec_nac:{ $regex: /^.*\/01\/1985/ }}, {nombre:1, edad:1, _id:0}).sort({edad:1, nombre:-1})
+
+
+<------------------------------LIMIT SKIP VAN DESPUES DE FIND O SHORT--------------------------------------->
+
+db.collection.find({},{nombre:1}).short().limit(10).skip(10)
+db.collection.find({}).limit(10).skip(10)
+
+
+db.People.find({},{nombre:1}).limit(10).skip(20)
+
+
+
+<-------------------------------Insertar o eliminar-------------------------------->
+
+INSERTAR UN ELEMENTO
+
+db.collection.insertOne()
+
+ db.Family.insertOne({nombre:"Orlando", apellido:"Vergara", parentezco:"Padre", edad: 56, genero:"M", deportista: true})
+
+db.Family.insertOne({nombre:"Gloria", apellido:"Montenegro", parentezco:"Madre", edad: 57, genero:"F", deportista: true})
+db.Family.insertOne({nombre:"Andrea", apellido:"Vergara", parentezco:"Hermana", edad: 32, genero:"F", deportista: false})
+
+
+INSERTAR VARIOS
+
+db.collection.insertMany([{documento 1},{docuemnto 2},{documento3}])
+
+db.Family.insertMany([{nombre:"Sergio", apellido:"Vergara", parentezco:"Hermano", edad: 33, genero:"M", deportista: false},{nombre:"Stefania", apellido:"Fandiño", parentezco:"Pareja", edad: 28, genero:"M", deportista: false}])
+
+ELIMINAR
+
+
+db.Collection.deleteOne({condicion})
+
+db.Collection.deleteMany()
+
+db.Tareas.deleteOne({titulo:"Mercar"})
+<------------------------------------------Actualizar elementos---------------------------------------------------------->
+
+Actualizar datos 
+
+$set cambiar el valor de una clave
+
+db.collection.updateOne({condicion},{$set: {clave a reemplazar}})
+
+db.Tareas.updateOne({titulo:"Continuar proyecto"},{$set:{finalizada:true}})
+
+
+db.collection.updateMany({condicion},{$set:{clave agreagar o reeemplazar}})
+
+db.Tareas.updateMany({},{$set:{fecha:"03-04-2003"}})
+
+db.Tareas.updateMany({},{$set:{finalizada:false}})
+
+
+$rename renombrar una clave
+
+db.collection.updateOne({condicion},{$rename: {nombre de clave:"nombre nuevo de la clave"}})
+
+
+
+
+Consultas:
+
+cantidad de consultas
+
+db.Consultas.find({}).count()
+5
+
+cantidad de pacientes
+db.Pacientes.find({}).count()
+5
+
+cantidad de doctores
+db.Doctores.find({}).count()
+4
+
+Tipos de especialidades
+db.Doctores.find({},{especialidad:1,_id:0})
+
+Cantidad de especialidades
+db.Doctores.find({},{especialidad:1,_id:0}).count()
+4
+
+
+db.Doctores.find({fec_nac:{$regex: /^03-04/}})
+

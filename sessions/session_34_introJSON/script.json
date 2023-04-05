@@ -1,0 +1,35 @@
+/* //JSON  javascript object notation
+/* {
+
+    clave: valor,
+    clave: valor
+}
+
+{
+    clave: valor,
+        clave : valor,
+            clave: {
+        clave: valor,
+            clave: valor
+    }
+}  */
+/* {
+    "color": "rojo",
+    "marca": "ford",
+    "modelo": 2003,
+    "sistema": {
+        "caja": "mecanica",
+        "frenos": "abs",
+        "direccion": "hidraulica"
+    }
+} */
+{
+    "name": "rocky",
+    "family": "cánidos",
+    "race": "dachshund",
+    "color": "black and tan",
+    "age": 1,
+    "bite": false,
+    "bark": true,
+    "width": "9 kg"
+}

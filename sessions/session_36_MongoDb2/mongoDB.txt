@@ -1,0 +1,22 @@
+
+
+<--------------------------------LIMIT limita cantidad de resultados-------------------------->
+
+limit: 10 // muestra 10 resultados
+
+Obtener el nombre y apellido de las primeras 10 personas que su nombre comience con A, 
+ordenarlo de mayor a menor por la edad
+
+
+{nombre: {$regex: /^A/}}
+PROJECT {nombre:1, apellido:1,_id:0, edad:1}
+SORT {edad: -1}
+LIMIT 10
+
+<--------------------------------SKIP salta los documentos a la proxima cant de elementos---------------------->
+
+
+Mostrar los 2º 6 documentos de personas que tengan una "h" en su apellido, o no tengan una "x" en su email.
+Y el talle sea M o S pero no tengan más de 30 años de edad, y hayan nacido los primeros 2 días del año.
+
+{$or:[{apellido: {$regex: /h/}}, {email:{$not:/x/}}], edad:{$lte: 30}, fec_nac:{$regex: /^.*\/01\/.*$/}, $or:[{talle:"M"}, {talle:"S"}], $or:[{fec_nac: {$regex: /^01/}},{fec_nac:{$regex: /^02/}}] }
