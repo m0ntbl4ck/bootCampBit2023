@@ -1,0 +1,74 @@
+Pasos para Node:
+
+1) crear una carpeta
+2) crear un package.json con npm init
+3)crera un archivo index.js
+4) crear en el index.js
+
+const http = require('http');
+const fs =require('fs');
+
+htttp.createServer(function (req, res){
+
+  //codigo para dar respuesta al cliente
+
+}).listen(3000,function{
+    console.log("servidor escuchando en el puerto 3000);
+})
+
+
+5) instalar servidor en vivo npm install nodemon servidor en vivo
+
+6) iniciar el servidor (npx nodemon index.js)
+
+
+7) crear la cabecera de la respuesta
+
+htttp.createServer(function (req, res){
+
+  res.writeHead(200,{
+    "Content-Type": "text/html",
+    "Access-Control-Allow-Origin": "*"
+  });
+
+// acceder al archivo que quiero enviarle al cliente
+
+  let leerArchivo= fs.createReadStream(_dirname+ "/index.html");
+
+  leerArchivo.pipe(res);
+
+}).listen(3000,function{
+    console.log("servidor escuchando en el puerto 3000);
+})
+
+
+
+
+Pasos para EXPRESS
+
+1) CREAR EXPRESS EN LA carpeta (npm install express) 
+2) en el index.js crear 
+
+const express = require("express");
+const app = express();
+
+// creamos la URL + METODO = Petición del cliente
+
+//const path = require("path");
+
+
+app.get("/home", function (req, res) { //app.get("/ejemplo", function (req, res)
+
+    console.log("El cliente ingreso por GET a http://localhost:3000/home")
+
+    //respuesta del servidor
+    //res.send("Gracias por comunicarse con nosotros")
+
+    res.sendFile(__dirname + "/index.html")
+});
+
+app.listen(3000, function () {
+    console.log("Servidor listo y preparado en el puerto 3000")
+});
+
+
