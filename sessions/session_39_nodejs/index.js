@@ -29,15 +29,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
-// configurar el bodyparser
-
+// configuración para manejar ordenadamente los datos enviados por el cliente con un bodyparser
 app.use(bodyParser.urlencoded({ extended: true }));
-
 // creamos la URL + METODO = Petición del cliente
 
-//const path = require("path");
-
-
+// configuración para manejar archivos estaticos o recursos como js, css, imagenes etc
+app.use("/css", express.static("css"))
+// inicio index.html
 app.get("/home", function (req, res) { //app.get("/ejemplo", function (req, res)
 
     console.log("El cliente ingreso por GET a http://localhost:3000/home")

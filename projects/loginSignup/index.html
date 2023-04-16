@@ -6,46 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN AND SIGN UP</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>hola mundo</h1>
-
 
     <section>
-        <h3>LOGIN!</h3>
-        <h5>Happy to see you again!</h5>
+        <div class="card">
+            <h3 class="title">LOGIN!</h3>
+            <p class="paragraph">Happy to see you again!</p>
 
-        <form action="/consult" method="post">
-
-
-            <input type="email" name="emailExists" id="" required placeholder="Your email?"><br><br>
-
-            <input type="password" name="passExists" id="" required placeholder="Password"><br>
-
-            <input type="checkbox" name="remember" id="">
-            <label for="">Remember me?</label><br>
-
-            <button type="submit">LOGIN</button>
+            <form action="/consult" method="post" class="form">
 
 
-        </form>
-    </section>
-    <section>
-        <form action="/newRecord" method="post">
-            <h3>SIGN UP!</h3>
-            <h5>Tell us more about you!</h5>
+                <input class="input" type="email" name="emailExists" id="" required placeholder="Your email?"><br><br>
 
-            <input type="text" name="userName" required placeholder="Your name?"><br><br>
+                <input class="input" type="password" name="passExists" id="" required placeholder="Password"><br>
+                <div class="check-input">
+                    <input type="checkbox" name="remember" id="">
+                    <p>Remember me?</p>
+                </div>
+                <div class="card-button">
+                    <button type="submit" class="submit_button">LOGIN</button>
+                </div>
 
-            <input type="email" name="email" id="" required placeholder="E-mail Adress?"><br><br>
+            </form>
+            <hr>
+            <p class="paragraph">Need an account?<a href="/signUp">SING UP</a></p>
+        </div>
 
-            <input type="password" name="pass" id="" required placeholder="A password is useful"><br>
-
-            <input type="password" name="pass2" id="" placeholder="Confirm your password"><br>
-
-            <button type="submit">SIGN UP</button>
-        </form>
     </section>
 
 </body>

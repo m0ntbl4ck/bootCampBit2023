@@ -4,11 +4,15 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use("/css", express.static("css"));
 
 app.get("/home", function (req, res) {
 
     res.sendFile(__dirname + "/index.html");
+})
+app.get("/signUp", function (req, res) {
+
+    res.sendFile(__dirname + "/signUp.html");
 })
 
 var totalData = [];

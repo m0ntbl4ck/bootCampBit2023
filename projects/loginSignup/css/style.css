@@ -1,0 +1,81 @@
+body{
+background-color: rgb(81, 182, 221);
+}
+
+section{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card
+{
+background-color: aliceblue;
+border-color: black;
+border-radius: 10px;
+margin: 15px;
+box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.20);
+width: 250px;
+height: 300px;
+}
+
+.form{
+    margin-left: 40px;
+    margin-right: 40px;
+   
+}
+
+.title{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: small;
+}
+
+.paragraph{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: x-small;
+    color: #a5a5a5;
+}
+.card-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.submit_button{
+    background-color: #ff4f76;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    font-size: x-small;
+    width: 100%;
+    height: 20px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+
+}
+
+.input{
+    width: 100%;
+    height: 15px;
+    color: #a5a5a5;
+    font-size: x-small;
+}
+
+.check-input{
+    display: flex;
+    justify-content: center;
+}
+
+.check-input p{
+    font-size: x-small;
+    color: #a5a5a5;
+}
+
