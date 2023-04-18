@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Listado de tareas</h1>
+    <ul id="tareas">
+
+    </ul>
+    <hr>
+    <h2>Crear nueva tarea</h2>
+
+    <form action="" id="formTarea">
+        <input type="text" name="titulo" id="" placeholder="ingrese el titulo de la tarea"><br><br>
+        <textarea type="text" name="descripcion" cols="30" rows="10" id=""
+            placeholder="Ingrese la descripción de la tareas">
+            </textarea><br>
+
+        <select name="finalizada" id="">
+            <option value="0">Estado</option>
+            <option value="true">Finalizada</option>
+            <option value="false">Pendiente</option>
+        </select><br>
+        <input type="text" name="categoria" id="" placeholder="Categoria"><br>
+        <input type="date" name="fecha" id=""><br>
+        <input type="submit" value="Guardar">
+
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
