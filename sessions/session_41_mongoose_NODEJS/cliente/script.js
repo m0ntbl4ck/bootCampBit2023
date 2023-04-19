@@ -3,9 +3,9 @@ $(document).ready(function () {
 
     //alert('hola')
 
-    peticion_servidor();
+    pedir_tarea();
 
-    function peticion_servidor() {
+    function pedir_tarea() {
 
 
         $.ajax({
@@ -24,10 +24,15 @@ $(document).ready(function () {
         $('#tareas').empty();
         for (let i = 0; i < resp.length; i++) {
             console.log(resp[i]);
-            $('#tareas').append('<li>' + resp[i].titulo + " - <a href='/editar/" +
-                resp[i]._id +
-                "'> Editar " +
-                "</a>" + '</li>')
+
+            let a_editar, a_eliminar;
+            a_editar = "<a href='/tarea/" + resp[i]._id + "/" + resp[i].titulo + "'> Editar </a>";
+
+            // /eliminar/123445
+            a_eliminar = "<a href='/eliminar/" + resp[i]._id + "'>Eliminar</a>"
+            $("#tareas").append(
+                "<li>" + resp[i].titulo + " - " + a_editar + " - " + a_eliminar + "</li>"
+            );
         }
     }
 
@@ -42,7 +47,7 @@ $(document).ready(function () {
             success: function (resp) {
                 alert(resp);
                 // location.href('/')
-                peticion_servidor()
+                pedir_tarea()
 
             }
         })
