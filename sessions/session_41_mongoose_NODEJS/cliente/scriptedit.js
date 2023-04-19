@@ -11,12 +11,11 @@ $(document).ready(function () {
         method: 'post',
         success: function (resp) {
             console.log(resp);
-            $('#titulo').text(resp.titulo);
-            console.log($('#titulo').text())
-            $('#descripcion').text(resp.descripcion);
-            $('#finalizada').val(resp.finalizada);
-            $('#categoria').text(resp.categoria);
-            $('#fecha').val(resp.fecha);
+            $('#titulo_tarea').val(resp.titulo)
+            $('#descripcion_tarea').text(resp.descripcion);
+            $('#finalizada_tarea').val(resp.finalizada);
+            $('#categoria_tarea').val(resp.categoria);
+            $('#fecha_tarea').val(resp.fecha);
         },
 
     });
@@ -30,7 +29,7 @@ $(document).ready(function () {
             data: datos,
             success: function (resp) {
                 alert(resp);
-                window.location.href = 'http//localhost:3000'
+                /* window.location.href = 'http://localhost:3000/' */
 
             },
 
