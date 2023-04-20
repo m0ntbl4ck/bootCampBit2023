@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN AND SIGN UP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -16,16 +16,19 @@
             <h3 class="title">LOGIN!</h3>
             <p class="paragraph">Happy to see you again!</p>
 
-            <form action="/consult" method="post" class="form">
+            <form action="" id="form_login">
 
 
-                <input class="input" type="email" name="emailExists" id="" required placeholder="Your email?"><br><br>
+                <input class="input" type="email" name="email" id="email_exists" required
+                    placeholder="Your email?"><br><br>
 
-                <input class="input" type="password" name="passExists" id="" required placeholder="Password"><br>
-                <div class="check-input">
+                <input class="input" type="password" name="password" id="pass_exists" required
+                    placeholder="Password"><br>
+                <!-- <div class="check-input">
                     <input type="checkbox" name="remember" id="">
                     <p>Remember me?</p>
-                </div>
+                </div> -->
+
                 <div class="card-button">
                     <button type="submit" class="submit_button">LOGIN</button>
                 </div>
@@ -36,7 +39,8 @@
         </div>
 
     </section>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./login.js"></script>
 </body>
 
 </html>

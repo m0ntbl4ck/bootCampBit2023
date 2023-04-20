@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/AGREGAR">Agregar gasto/ingreso</a></li>
+            <li><a href="listado">Listado</a></li>
+        </ul>
+    </nav>
+
+    <form action="" id="formAgregar">
+        <select name="" id="">
+            <option value="0">GASTO O INGRESO</option>
+            <option value="gasto">Gasto</option>
+            <option value="ingreso">Ingreso</option>
+        </select><br>
+
+        <input type="number" name="monto" id="" placeholder="$"><br>
+        <textarea name="descripcion" id="" cols="30" rows="7" placeholder="Descripción"></textarea>
+        <br>
+        <input type="date" name="fecha" id="">
+        <br><br>
+        <input type="submit" value="Agregar">
+
+    </form>
+    <!--  --JQUERY-- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--  -- JS-- -->
+    <script src="./creargasto.js"></script>
+</body>
+
+</html>
