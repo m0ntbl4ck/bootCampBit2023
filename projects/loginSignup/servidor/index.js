@@ -22,8 +22,9 @@ app.use('/', express.static(path.resolve('../cliente/')));
 app.get("/", function (req, res) {
     res.sendFile(path.resolve("../cliente/index.html"));
 })
-app.get("/signUp", function (req, res) {
 
+
+app.get("/signUp", function (req, res) {
     res.sendFile(path.resolve("../cliente/signUp.html"));
 })
 
