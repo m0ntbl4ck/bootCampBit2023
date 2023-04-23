@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario Registro de nuevo cliente</h1>
+    <hr>
+
+    <section>
+        <form id="form_newcustomer">
+            <input type="text" name="first_name" id="first_name" required
+                placeholder="Ingrese los nombres del cliente"><br><br>
+            <input type="text" name="last_name" id="last_name" required
+                placeholder="Ingrese los apellidos del cliente"><br><br>
+            <input type="text" name="country" id="country" required
+                placeholder="Ingrese el País de residencia del cliente"><br><br>
+            <input type="number" name="phone_number" id="phone_number" required
+                placeholder="Ingrese el Telefono de contacto del cliente"><br><br>
+            <input type="email" name="email" id="email" placeholder="Ingrese el email del cliente"><br><br>
+            <input type="date" name="registration_date" id="registration_date" required
+                placeholder="Ingrese la fecha actual"><br><br>
+            <input type="submit" value="Guardar nuevo cliente">
+        </form>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../js/new_customer.js"></script>
+</body>
+
+</html>

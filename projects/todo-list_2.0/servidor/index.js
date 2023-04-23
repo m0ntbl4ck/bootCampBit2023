@@ -21,7 +21,6 @@ mongoose
 // configuraciones
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', express.static(path.resolve('../cliente/')));
-
 // Modelo dedatos
 const Tarea = require('./models/tareas');
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Formulario Registro de contacto</h1>
+    <hr />
+    <section>
+        <form id="form_search">
+        <select name="first_name" id="select_search">
+          <option value="0">Buscar Cliente por nombre o apellido</option>
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+        <!-- <input
+          type="text"
+          name="exists"
+          id="exists"
+          placeholder="Buscar Cliente por nombre o apellido" /> -->
+
+       
+        <hr />
+        <p id="alert">Usuario no encontrado</p>
+      </form>
+      <form id="form_newcontact" action="">
+        <input type="text" name="nombre" id="nombre">
+        <input type="hidden"  name="first_name" id="first_name" />
+        <select name="state" id="state" required>
+          <option value="0">Estado</option>
+          <option value="posible comprador">Posible comprador</option>
+          <option value="no interesado">No interesado</option>
+          <option value="venta cerrada">Venta cerrada</option></select
+        ><br /><br />
+        <select name="type_of_contact" id="type_of_contact" required>
+          <option value="0">Tipo de contacto</option>
+          <option value="teléfono">Teléfono</option>
+          <option value="email">Email</option>
+          <option value="reunión presencial">Reunión presencial</option></select
+        ><br /><br />
+        <input
+          type="date"
+          required
+          name="registration_date"
+          id="registration_date" />
+        <input type="submit" value="Guardar Contacto" />
+      </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../js/new_contact.js"></script>
+  </body>
+</html>
