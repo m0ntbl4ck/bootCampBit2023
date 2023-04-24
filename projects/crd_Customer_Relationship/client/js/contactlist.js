@@ -24,7 +24,7 @@ $(document).ready(function () {
     for (let i = 0; i < resp.length; i++) {
       console.log(resp[i]);
       $('#tbody').append(
-        `<tr><td>${resp[i].first_name}</td><td>${resp[i].state}</td><td>${resp[i].type_of_contact}</td><td>${resp[i].registration_date}</td><td><button onclick="eliminar('${resp[i]._id}')">Eliminar</button></td></tr>`,
+        `<tr><td class="text-center">${resp[i].first_name}</td><td class="text-center">${resp[i].state}</td><td class="text-center">${resp[i].type_of_contact}</td><td class="text-center">${resp[i].registration_date}</td><td><button class="btn btn-danger" onclick="eliminar('${resp[i]._id}')">Eliminar</button></td></tr>`,
       );
     }
   };

@@ -106,6 +106,14 @@ app.delete('/delete/:id', async function (req, res) {
   await contact_customer.findByIdAndRemove(contactid);
   res.send('Borrado exitoso');
 });
+
+app.delete('/customer_delete/:id', async function (req, res) {
+  let customerid = req.params.id;
+
+  await customer.findByIdAndRemove(customerid);
+  res.send('Borrado exitoso');
+});
+
 app.listen(3000, function () {
   console.log('Servidor listo en el puerto 3000');
 });
