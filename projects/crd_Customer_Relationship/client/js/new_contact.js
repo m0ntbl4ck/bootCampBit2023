@@ -10,13 +10,6 @@ $(document).ready(function () {
     success: function (resp) {
       console.log(resp);
 
-      /*for (let i = 0; i < resp.length; i++) {
-        const namevalue = `${resp[i].first_name} ${resp[i].last_name}`;
-        $('#tbody').empty();
-        $('#select_search').append(
-          `<option value="${namevalue}">${namevalue}</option>`,
-        );
-      } */
       $('#tbody').empty();
       resp.forEach((element) => {
         const namevalue = `${element.first_name} ${element.last_name}`;
@@ -24,8 +17,6 @@ $(document).ready(function () {
           `<option value="${namevalue}">${namevalue}</option>`,
         );
       });
-      /* $('#first_name').attr('value', `${resp.first_name} ${resp.last_name}`);
-       */
     },
     error: function (resp) {
       alert(resp.responseText);

@@ -1,0 +1,19 @@
+CONCEPTOS DE REACT 
+
+ESTADOS 
+
+CIclo de vida de un componente
+
+1) Mounting = montar // Se inserta contenido en el DOM
+2) Updating = actualizar // Existe un cambio en un componente
+3) Unmonting - desmontar // Se desmonta o se quita un componente 
+
+HOOKS
+
+Get Obtener
+Set  Modificar
+
+1) useState devuelve un array
+
+[0] obtener el valor
+[1] modificar el valor
